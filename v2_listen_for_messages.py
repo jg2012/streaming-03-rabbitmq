@@ -51,7 +51,7 @@ def process_message(ch, method, properties, body):
 # define a main function to run the program
 # pass in the hostname as a string parameter if you like
 # if no argument is provided, set a default value to localhost
-def main(hn: str = "localhosttt"):
+def main(hn: str = "LOCALHOST"):
     """Main program entry point."""
 
     # when a statement can go wrong, use a try-except block
@@ -62,11 +62,9 @@ def main(hn: str = "localhosttt"):
 
     # except, if there's an error, do this
     except Exception as e:
-        logger.error()
         logger.error("ERROR: connection to RabbitMQ server failed.")
         logger.error(f"Verify the server is running on host={hn}.")
         logger.error(f"The error says: {e}")
-        logger.error()
         sys.exit(1)
 
     try:

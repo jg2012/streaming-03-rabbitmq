@@ -40,16 +40,19 @@ def send_message(host: str, queue_name: str, message: str):
 
     try:
         # create a blocking connection to the RabbitMQ server
-        conn = pika.BlockingConnection(pika.ConnectionParameters(host))
+        conn = pika.BlockingConnection(pika.ConnectionParameters("LOCALHOST"))
 
         # use the connection to create a communication channel
         ch = conn.channel()
 
         # use the channel to declare a queue
-        ch.queue_declare(queue=queue_name)
+        ch.queue_declare(queue="hello")
+
+        #declaring the message variable
+        message = "This is version 2 of this code."
 
         # use the channel to publish a message to the queue
-        ch.basic_publish(exchange="", routing_key=queue_name, body=message)
+        ch.basic_publish(exchange="", routing_key="hello", body=message)
 
         # log a message for the user
         logger.info(f" [x] Sent {message}")

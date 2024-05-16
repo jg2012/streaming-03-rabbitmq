@@ -122,7 +122,9 @@ Sending the same message each time is kind of boring. This time:
 1. Watch what happens in the listening terminal.
 
 Repeat this process several times - emit at least 4 different messages.
-Don't worry - it's just code. We can always revert back (try the 'undo' command in VS Code) to a version that works. You can't hurt anything.
+Don't worry - it's just code. We can always revert back (try the 'undo' command in VS Code) to a version that works. You can't hurt anything. 
+
+![Screenshot of code deployed](mod3_img1.png)
 
 ## Task 9. Save Time & Effort: Don't Repeat Yourself
 
@@ -137,6 +139,9 @@ Did you notice you had to change the message in TWO places?
 Now, to send a new message, you'll only make ONE change.
 Updating and improving code is called 'refactoring'. 
 Use your skills to keep coding enjoyable. 
+
+![Screenshot of code deployed](mod3_img2.png)
+![Screenshot of code deployed](mod3_img3.png)
 
 ## Version 2
 
@@ -161,6 +166,7 @@ Each of the version 2 programs include an error as well.
 1. Search GitHub for if __name__ == "__main__":
 1. How many hits did you get? 
 1. Learn and understand this common Python idiom.
+![Screenshot of code deployed](mod3_img4.png)
 
 ## Reference
 
